@@ -15,8 +15,9 @@
  .m-glass {
      color: #E02C6D;
  }
- .star{
-    color: rgb(255, 107, 1);
+
+ .star {
+     color: rgb(255, 107, 1);
  }
 
  .arrow {
@@ -63,13 +64,13 @@
  .banner {
      display: flex;
      align-items: center;
-     padding:100px;
+     padding: 100px;
      background-image: url(images/Circle\ design-svg.png);
      background-repeat: no-repeat;
-     background-position:870px 90px;
+     background-position: 870px 90px;
      background-size: auto;
 
-    
+
  }
 
  .banner-title {
@@ -100,18 +101,108 @@
 
 
  .camera {
-    position: relative;
-    top: 30px;
+     position: relative;
+     top: 30px;
  }
+
  /* main part styling  */
 
-.icon-container{
+ .icon-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 50px;
+     padding: 100px;
+ }
+
+ /* image part starts  */
+
+ .image-container {
+     /* text-align: center; */
+     align-items: center;
+     margin:20px 100px;
+
+ }
+ .image-conatiner-title{
+    text-align: center;
+    padding: 50px;
+ }
+ 
+
+ .popular-product-container {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     justify-content: center;
+     gap: 25px;
+ }
+
+ .popular-product {
+     width: 20rem;
+     height: 29.2rem;
+     border-radius: 5px;
+     background: #FFF;
+     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+     padding-left: 50px;
+     position: relative;
+
+ }
+ .popular-product:hover{
+    transform: scale(1.025);
+ }
+
+
+ .hov-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    gap: 50px;
-    padding: 100px;
-}
+    flex-direction: column;
+    opacity: 0;
+    transition: .6;
+    
+ }
+ .hov-content:hover{
+    opacity: .8;
+ }
+ .hov-content h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+ }
+ .hov-content p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #F1E4FF;
+
+ }
+
+ 
+
+ .product-img{
+    padding-top: 30px;
+    padding-bottom: 15px;
+
+ }
+ .product-para{
+    padding-right: 40px;
+ } 
+ 
+ .f-icon{
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #5E6366;
+ 
+ }
 
 
 
@@ -151,14 +242,11 @@
 
 
 
-
-
-
-
+ 
  @media screen and (max-width: 576px) {
 
      nav,
-     .nav-menu>ul {
+     .nav-menu>ul{
          flex-direction: column;
          gap: 0px;
          text-align: center;
@@ -169,8 +257,6 @@
      .nav-title {
          padding: 50px;
      }
-
-     .nav-menu>ul {}
 
      .nav-menu>ul li {
          margin-left: 0px;
@@ -196,9 +282,31 @@
          width: auto;
          padding-bottom: 90px;
      }
-     .icon-container{
-        flex-wrap: wrap;
-    }
+
+     .icon-container {
+         flex-wrap: wrap;
+         padding: 20px;
+     }
+
+     .image-container{
+        margin: 0 auto;
+     }
+     .image-conatiner-title{
+        padding-bottom: 20px;
+     }
+     .popular-product-container{
+        grid-template-columns: repeat(1,1fr);
+        margin-left: 28px;
+
+     }
+
+     .product-img{
+        width: 14rem;
+     }
+     .popular-product{
+        width: 16rem;
+        padding-left: 30px;
+     }
 
 
 
@@ -206,6 +314,12 @@
 
 
  }
+
+
+
+
+ 
+
 
  @media screen and (min-width:576px) and (max-width:960px) {
      nav {
@@ -213,36 +327,52 @@
          gap: 0px;
 
      }
-     .nav-menu{
-        padding-top: 50px;
+
+     .nav-menu {
+         padding-top: 50px;
 
      }
 
      .banner {
-        flex-direction: column;
+         flex-direction: column;
          margin: 10px;
-         padding:0px 5px ;
+         padding: 0px 5px;
          background-position: bottom;
          gap: 0px;
          text-align: center;
      }
+
      .banner-image {
-        width: auto;
-    }
-    .pink-btn{
-        margin-bottom: 100px;
-    }
-    .camera {
-        position: static;}
+         width: auto;
+     }
+
+     .pink-btn {
+         margin-bottom: 100px;
+     }
+
+     .camera {
+         position: static;
+     }
 
 
-    .icon-container{
-        flex-wrap: wrap;
-    }
+     .icon-container {
+         flex-wrap: wrap;
+     }
+     .popular-product-container{
+        grid-template-columns: repeat(2,1fr);
+        margin-left: 28px;
+
+
+     }
+     .product-img{
+        width: 16rem;
+     }
+     .popular-product{
+        width: 18rem;
+        padding-left: 20px;
+     }
+
 
 
 
  }
-
-
-
