@@ -97,6 +97,12 @@
      border-radius: 41px;
      padding: 10px 24px;
      border: 0;
+     transition: .5s;
+ }
+
+ .pink-btn:hover{
+    background-color: #cda4f6;
+    color: #E02C6D;
  }
 
 
@@ -118,16 +124,16 @@
  /* image part starts  */
 
  .image-container {
-     /* text-align: center; */
      align-items: center;
-     margin:20px 100px;
+     margin: 20px 100px;
 
  }
- .image-conatiner-title{
-    text-align: center;
-    padding: 50px;
+
+ .image-conatiner-title {
+     text-align: center;
+     padding: 50px;
  }
- 
+
 
  .popular-product-container {
      display: grid;
@@ -146,62 +152,151 @@
      position: relative;
 
  }
- .popular-product:hover{
-    transform: scale(1.025);
+
+ .popular-product:hover {
+     transform: scale(1.025);
  }
 
 
- .hov-content{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.6);
+ .hov-content {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background: rgba(0, 0, 0, 0.6);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     opacity: 0;
+     transition: .6;
+     cursor: pointer;
+
+ }
+
+ .hov-content:hover {
+     opacity: .8;
+ }
+
+ .hov-content h2 {
+     font-size: 2rem;
+     font-weight: 700;
+     color: #ffffff;
+ }
+
+ .hov-content p {
+     font-size: 1.2rem;
+     font-weight: 700;
+     color: #F1E4FF;
+
+ }
+
+
+
+ .product-img {
+     padding-top: 30px;
+     padding-bottom: 15px;
+
+ }
+
+ .product-para {
+     padding-right: 40px;
+ }
+
+ .f-icon {
+     padding: 10px 0px;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     gap: .6rem;
+     font-size: 1rem;
+     font-weight: 700;
+     color: #5E6366;
+
+ }
+
+ .see {
+     color: #E02C6D;
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     gap: 8px;
+     margin: 30px 15px;
+     position: relative;
+     transition: 1s;
+ }
+
+ .see:hover {
+     color: #0c6fac;
+     transform: scale(1.015);
+ }
+
+
+ /* featured part style  */
+ .featured-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 10px;
+     margin: 100px;
+ }
+
+ .feature-image {
+     width: 40%;
+     position: relative;
+
+ }
+
+ .feature-image:hover {
+     transform: scale(1.15);
+ }
+ 
+
+ .feature-content {
+     width: 60%;
+     padding-left: 20px;
+ }
+
+ .feature-title {
+     color: #0A0826;
+     font-size:2.3rem;
+     font-weight: 700;
+     line-height: 60px;
+ }
+
+ .feature-para {
+     color: #6C6C6C;
+     font-size: 1rem;
+     font-weight: 700;
+     line-height: 28px;
+     padding: 20px 0px;
+ }
+
+ .feature-btn {
+     color: #FFF;
+     font-size: 1rem;
+     font-weight: 700;
+     background-color: #E02C6D;
+     border: 0;
+     padding: 14px 24px;
+     position: relative;
+     transition: .5s;
+ }
+ .feature-btn:hover{
+    background-color: #cca5f5;
+    color: #E02C6D;
+ }
+
+ /* footer starts  */
+ .footer-container{
+    background-color:#0A0826;
+    color: #FFF;
     display: flex;
-    justify-content:center;
-    align-items: center;
     flex-direction: column;
-    opacity: 0;
-    transition: .6;
-    
- }
- .hov-content:hover{
-    opacity: .8;
- }
- .hov-content h2{
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
- }
- .hov-content p{
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #F1E4FF;
-
- }
-
- 
-
- .product-img{
-    padding-top: 30px;
-    padding-bottom: 15px;
-
- }
- .product-para{
-    padding-right: 40px;
- } 
- 
- .f-icon{
-    padding: 10px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: .6rem;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #5E6366;
- 
+    justify-content: center;
+    text-align: center;
+    padding: 100px;
  }
 
 
@@ -242,11 +337,13 @@
 
 
 
- 
+
+
  @media screen and (max-width: 576px) {
 
+     /* nav part  */
      nav,
-     .nav-menu>ul{
+     .nav-menu>ul {
          flex-direction: column;
          gap: 0px;
          text-align: center;
@@ -264,6 +361,7 @@
 
      }
 
+     /* banner part  */
      .banner {
          flex-direction: column-reverse;
          padding: 50px 10px;
@@ -283,30 +381,53 @@
          padding-bottom: 90px;
      }
 
+
      .icon-container {
          flex-wrap: wrap;
          padding: 20px;
      }
 
-     .image-container{
-        margin: 0 auto;
+     /* image part  */
+     .image-container {
+         margin: 0 auto;
      }
-     .image-conatiner-title{
-        padding-bottom: 20px;
+
+     .image-conatiner-title {
+         padding-bottom: 20px;
      }
-     .popular-product-container{
-        grid-template-columns: repeat(1,1fr);
-        margin-left: 28px;
+
+     .popular-product-container {
+         grid-template-columns: repeat(1, 1fr);
+         margin-left: 28px;
 
      }
 
-     .product-img{
-        width: 14rem;
+     .product-img {
+         width: 14rem;
      }
-     .popular-product{
-        width: 16rem;
-        padding-left: 30px;
+
+     .popular-product {
+         width: 16rem;
+         padding-left: 30px;
      }
+     /* featured part  */
+     .featured-container {
+        margin: 10px;
+        flex-direction: column-reverse;
+    }
+    .feature-content {
+        width: auto;
+        text-align: center;
+    }
+    .feature-image{
+        width: auto;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .feature-image img {
+        width: 80%;
+
+    }
 
 
 
@@ -318,7 +439,7 @@
 
 
 
- 
+
 
 
  @media screen and (min-width:576px) and (max-width:960px) {
@@ -358,19 +479,45 @@
      .icon-container {
          flex-wrap: wrap;
      }
-     .popular-product-container{
-        grid-template-columns: repeat(2,1fr);
-        margin-left: 28px;
+
+     .popular-product-container {
+         grid-template-columns: repeat(2, 1fr);
+         margin-left: 28px;
 
 
      }
-     .product-img{
-        width: 16rem;
+
+     .product-img {
+         width: 16rem;
      }
-     .popular-product{
-        width: 18rem;
-        padding-left: 20px;
+
+     .popular-product {
+         width: 18rem;
+         padding-left: 20px;
      }
+     /* feature part  */
+
+     .featured-container {
+        margin: 20px;
+        flex-direction: column-reverse;
+    }
+    .feature-content {
+        width: auto;
+        text-align: center;
+    }
+    .feature-image{
+        width: auto;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .feature-image img {
+        width: 80%;
+
+    }
+
+
+
+
 
 
 
